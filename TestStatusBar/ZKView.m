@@ -18,6 +18,6 @@
     return self;
 }
 -(void)createUI {
-    NSLog(@"abcdefg");
+    NSLog(@"zhangkunsyas");
 }
 @end
