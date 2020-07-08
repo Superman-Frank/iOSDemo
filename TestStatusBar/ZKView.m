@@ -19,5 +19,6 @@
 }
 -(void)createUI {
     NSLog(@"welcome to NBA");
+    NSLog(@"testGit");
 }
 @end
