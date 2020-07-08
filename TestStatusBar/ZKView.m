@@ -18,6 +18,6 @@
     return self;
 }
 -(void)createUI {
-    NSLog(@"zhangkunsyas");
+    NSLog(@"welcome to NBA");
 }
 @end
