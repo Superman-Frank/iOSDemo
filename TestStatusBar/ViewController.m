@@ -93,9 +93,11 @@ static NSString * const cellID = @"cellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIControl * control = [[UIControl alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
-    [control addTarget:self action:@selector(clicks) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:control];
+//    UIControl * control = [[UIControl alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+//    [control addTarget:self action:@selector(clicks) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:control];
+    
+    NSLog(@"取消屏幕点击");
     
     UIView *colorView = [[UIView alloc] init];
     colorView.frame = CGRectMake(0, 400, 200, 200);
