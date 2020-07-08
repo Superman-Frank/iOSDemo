@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		479BF1056C24AC08CC543F31 /* Pods_TestStatusBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A111F241385083EF7A4DCC28 /* Pods_TestStatusBar.framework */; };
+		8107189724B5BCD500C2709D /* ZKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8107189624B5BCD500C2709D /* ZKView.m */; };
 		811D5610245687C600D7E133 /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 811D560F245687C600D7E133 /* Manager.m */; };
 		811D561324568C4B00D7E133 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 811D561224568C4B00D7E133 /* Player.m */; };
 		811D561624568FC600D7E133 /* Tematemates.m in Sources */ = {isa = PBXBuildFile; fileRef = 811D561524568FC600D7E133 /* Tematemates.m */; };
@@ -108,6 +109,8 @@
 /* Begin PBXFileReference section */
 		2521E2E271912DE624974377 /* Pods-TestStatusBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestStatusBar.release.xcconfig"; path = "Target Support Files/Pods-TestStatusBar/Pods-TestStatusBar.release.xcconfig"; sourceTree = "<group>"; };
 		5B09EAC2477657362D15CA99 /* Pods-TestStatusBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestStatusBar.debug.xcconfig"; path = "Target Support Files/Pods-TestStatusBar/Pods-TestStatusBar.debug.xcconfig"; sourceTree = "<group>"; };
+		8107189524B5BCD500C2709D /* ZKView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKView.h; sourceTree = "<group>"; };
+		8107189624B5BCD500C2709D /* ZKView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKView.m; sourceTree = "<group>"; };
 		811D560E245687C600D7E133 /* Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
 		811D560F245687C600D7E133 /* Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
 		811D561124568C4B00D7E133 /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
@@ -311,6 +314,8 @@
 				81B536D524AC785C002F25CC /* AppDelegate+MyAppDelegateService.m */,
 				81B76711243FFC0800D271F9 /* ViewController.h */,
 				81B76712243FFC0800D271F9 /* ViewController.m */,
+				8107189524B5BCD500C2709D /* ZKView.h */,
+				8107189624B5BCD500C2709D /* ZKView.m */,
 				8190B55824B574B1005CC281 /* ZKGradientBorderView.h */,
 				8190B55924B574B1005CC281 /* ZKGradientBorderView.m */,
 				8190B55524B56434005CC281 /* SectionView.h */,
@@ -669,6 +674,7 @@
 				81B536D624AC785C002F25CC /* AppDelegate+MyAppDelegateService.m in Sources */,
 				8160A31424986EBC0031E0BE /* TabbarController.m in Sources */,
 				8160A32024986F150031E0BE /* ThirdViewController.m in Sources */,
+				8107189724B5BCD500C2709D /* ZKView.m in Sources */,
 				811D561624568FC600D7E133 /* Tematemates.m in Sources */,
 				81ED3E38249353860016D782 /* NSString+FirstLetter.m in Sources */,
 				81ED3E3E24935F720016D782 /* BMChineseSort.m in Sources */,
