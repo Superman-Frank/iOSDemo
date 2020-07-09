@@ -140,11 +140,11 @@ static NSString * const cellID = @"cellID";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self.view addSubview:self.textField];
     self.textField.inputView = self.datePicker;
     self.textField.inputAccessoryView = self.toolbar;
 //    [self.view addSubview:_toolbar];
-
     
     
 //    UIControl * control = [[UIControl alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];

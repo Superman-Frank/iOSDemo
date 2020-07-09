@@ -140,11 +140,19 @@ static NSString * const cellID = @"cellID";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+<<<<<<< HEAD
     [self.view addSubview:self.textField];
     self.textField.inputView = self.datePicker;
     self.textField.inputAccessoryView = self.toolbar;
 //    [self.view addSubview:_toolbar];
-
+=======
+//    UIControl * control = [[UIControl alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+//    [control addTarget:self action:@selector(clicks) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:control];
+    
+    NSLog(@"取消屏幕点击");
+>>>>>>> dev
     
     
 //    UIControl * control = [[UIControl alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
