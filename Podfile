@@ -9,5 +9,6 @@ pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'Masonry'
 pod 'SDAutoLayout'
+pod 'CNPPopupController'
 end
 

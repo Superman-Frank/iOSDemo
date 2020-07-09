@@ -38,6 +38,9 @@ static NSString * const cellID = @"cellID";
 @property (nonatomic,strong)UICollectionViewFlowLayout * gridLayout;
 @property (nonatomic,strong)UICollectionViewFlowLayout * listLayout;
 @property (nonatomic,strong)UIButton * btn;
+@property (nonatomic,strong)UITextField * textField;
+@property (nonatomic,strong)UIDatePicker * datePicker;
+@property (nonatomic,strong)UIToolbar * toolbar;
 
 
 @end
@@ -45,6 +48,51 @@ static NSString * const cellID = @"cellID";
 @implementation ViewController
 -(void)injected{
     [self viewDidLoad];
+}
+-(void)cancelClick:(UIBarButtonItem *)item{
+    [self.textField resignFirstResponder];
+}
+-(void)doneClick:(UIBarButtonItem *)item{
+    NSDate * date = self.datePicker.date;
+    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"yyyy年 MM月 dd号"];
+    NSString * dateString = [dateFormatter stringFromDate:date];
+    self.textField.text = dateString;
+    [self.view endEditing:YES];
+}
+- (UIDatePicker *)datePicker
+{
+    if (!_datePicker) {
+        _datePicker = [[UIDatePicker alloc]init];
+        _datePicker.datePickerMode = UIDatePickerModeDate;
+        _datePicker.locale = [NSLocale localeWithLocaleIdentifier:@"zh-Hans"];
+    }
+    return _datePicker;
+}
+- (UIToolbar *)toolbar
+{
+    if (!_toolbar) {
+        _toolbar = [[UIToolbar alloc]init];
+        _toolbar.bounds = CGRectMake(0, 0, 0, 44);
+        UIBarButtonItem * cancelItem = [[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancelClick:)];
+        UIBarButtonItem * flexiableItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+        UIBarButtonItem * donelItem = [[UIBarButtonItem alloc]initWithTitle:@"确定" style:UIBarButtonItemStylePlain target:self action:@selector(doneClick:)];
+        _toolbar.items = @[cancelItem,flexiableItem,donelItem];
+        
+    }
+    return _toolbar;
+}
+- (UITextField *)textField
+{
+    if (!_textField) {
+        _textField = [[UITextField alloc]initWithFrame:CGRectMake(30, 100, ScreenWidth - 60, 44)];
+        _textField.layer.borderWidth = 1;
+        _textField.layer.borderColor = [UIColor systemRedColor].CGColor;
+        _textField.leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 16, 0)];
+        _textField.leftView.backgroundColor = [UIColor systemGreenColor];
+        _textField.leftViewMode = UITextFieldViewModeAlways;
+    }
+    return _textField;;
 }
 -(UICollectionViewFlowLayout *)gridLayout
 {
@@ -93,22 +141,28 @@ static NSString * const cellID = @"cellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIControl * control = [[UIControl alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
-    [control addTarget:self action:@selector(clicks) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:control];
+    [self.view addSubview:self.textField];
+    self.textField.inputView = self.datePicker;
+    self.textField.inputAccessoryView = self.toolbar;
+//    [self.view addSubview:_toolbar];
     
-    UIView *colorView = [[UIView alloc] init];
-    colorView.frame = CGRectMake(0, 400, 200, 200);
-//    colorView.center = CGPointMake(375/2.0, 100);
-    [self.view addSubview:colorView];
-        
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = colorView.bounds;
-    gradient.colors = @[(__bridge id)[UIColor blackColor].CGColor,(__bridge id)[UIColor whiteColor].CGColor];
-    gradient.startPoint = CGPointMake(0, 1);
-    gradient.endPoint = CGPointMake(1, 0);
-    //    gradient.locations = @[@(0.5f), @(1.0f)];
-    [colorView.layer addSublayer:gradient];
+    
+//    UIControl * control = [[UIControl alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+//    [control addTarget:self action:@selector(clicks) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:control];
+//
+//    UIView *colorView = [[UIView alloc] init];
+//    colorView.frame = CGRectMake(0, 400, 200, 200);
+////    colorView.center = CGPointMake(375/2.0, 100);
+//    [self.view addSubview:colorView];
+//
+//    CAGradientLayer *gradient = [CAGradientLayer layer];
+//    gradient.frame = colorView.bounds;
+//    gradient.colors = @[(__bridge id)[UIColor blackColor].CGColor,(__bridge id)[UIColor whiteColor].CGColor];
+//    gradient.startPoint = CGPointMake(0, 1);
+//    gradient.endPoint = CGPointMake(1, 0);
+//    //    gradient.locations = @[@(0.5f), @(1.0f)];
+//    [colorView.layer addSublayer:gradient];
     
     
     
