@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		479BF1056C24AC08CC543F31 /* Pods_TestStatusBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A111F241385083EF7A4DCC28 /* Pods_TestStatusBar.framework */; };
 		8107189724B5BCD500C2709D /* ZKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8107189624B5BCD500C2709D /* ZKView.m */; };
+		810718D924B70CD900C2709D /* ZKPopStyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 810718D824B70CD900C2709D /* ZKPopStyleView.m */; };
+		8118F10C24BC3B500025E234 /* UIControl+ZKControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8118F10B24BC3B500025E234 /* UIControl+ZKControl.m */; };
 		811D5610245687C600D7E133 /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 811D560F245687C600D7E133 /* Manager.m */; };
 		811D561324568C4B00D7E133 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 811D561224568C4B00D7E133 /* Player.m */; };
 		811D561624568FC600D7E133 /* Tematemates.m in Sources */ = {isa = PBXBuildFile; fileRef = 811D561524568FC600D7E133 /* Tematemates.m */; };
@@ -21,6 +23,9 @@
 		81403EF1245197CA00016826 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 81403EF0245197CA00016826 /* Student.m */; };
 		8141F1D424ADC22800E9033C /* Persons.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141F1D324ADC22800E9033C /* Persons.m */; };
 		8141F1D724ADCD4F00E9033C /* Players.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141F1D624ADCD4F00E9033C /* Players.m */; };
+		8145663A24BEA02900F9563B /* ZKGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8145663924BEA02900F9563B /* ZKGuideView.m */; };
+		8145663D24BEA2A500F9563B /* UIView+ZKLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8145663C24BEA2A500F9563B /* UIView+ZKLayout.m */; };
+		8145664324BEB03400F9563B /* UIImage+ZKMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8145664224BEB03400F9563B /* UIImage+ZKMask.m */; };
 		81572C19246680F70065D98E /* NBA.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81572C18246680F70065D98E /* NBA.plist */; };
 		81572C1C2466B74E0065D98E /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81572C1B2466B74E0065D98E /* TestModel.m */; };
 		8160A30D249860550031E0BE /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8160A30C249860550031E0BE /* CustomTabBar.m */; };
@@ -111,6 +116,11 @@
 		5B09EAC2477657362D15CA99 /* Pods-TestStatusBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestStatusBar.debug.xcconfig"; path = "Target Support Files/Pods-TestStatusBar/Pods-TestStatusBar.debug.xcconfig"; sourceTree = "<group>"; };
 		8107189524B5BCD500C2709D /* ZKView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKView.h; sourceTree = "<group>"; };
 		8107189624B5BCD500C2709D /* ZKView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKView.m; sourceTree = "<group>"; };
+		810718D424B70A6600C2709D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		810718D724B70CD900C2709D /* ZKPopStyleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKPopStyleView.h; sourceTree = "<group>"; };
+		810718D824B70CD900C2709D /* ZKPopStyleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKPopStyleView.m; sourceTree = "<group>"; };
+		8118F10A24BC3B500025E234 /* UIControl+ZKControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+ZKControl.h"; sourceTree = "<group>"; };
+		8118F10B24BC3B500025E234 /* UIControl+ZKControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+ZKControl.m"; sourceTree = "<group>"; };
 		811D560E245687C600D7E133 /* Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
 		811D560F245687C600D7E133 /* Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
 		811D561124568C4B00D7E133 /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
@@ -136,6 +146,12 @@
 		8141F1D324ADC22800E9033C /* Persons.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Persons.m; sourceTree = "<group>"; };
 		8141F1D524ADCD4F00E9033C /* Players.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Players.h; sourceTree = "<group>"; };
 		8141F1D624ADCD4F00E9033C /* Players.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Players.m; sourceTree = "<group>"; };
+		8145663824BEA02900F9563B /* ZKGuideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKGuideView.h; sourceTree = "<group>"; };
+		8145663924BEA02900F9563B /* ZKGuideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKGuideView.m; sourceTree = "<group>"; };
+		8145663B24BEA2A500F9563B /* UIView+ZKLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ZKLayout.h"; sourceTree = "<group>"; };
+		8145663C24BEA2A500F9563B /* UIView+ZKLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZKLayout.m"; sourceTree = "<group>"; };
+		8145664124BEB03400F9563B /* UIImage+ZKMask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZKMask.h"; sourceTree = "<group>"; };
+		8145664224BEB03400F9563B /* UIImage+ZKMask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZKMask.m"; sourceTree = "<group>"; };
 		81572C18246680F70065D98E /* NBA.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NBA.plist; sourceTree = "<group>"; };
 		81572C1A2466B74E0065D98E /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
 		81572C1B2466B74E0065D98E /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
@@ -314,8 +330,18 @@
 				81B536D524AC785C002F25CC /* AppDelegate+MyAppDelegateService.m */,
 				81B76711243FFC0800D271F9 /* ViewController.h */,
 				81B76712243FFC0800D271F9 /* ViewController.m */,
+				8145663824BEA02900F9563B /* ZKGuideView.h */,
+				8145663924BEA02900F9563B /* ZKGuideView.m */,
+				8145663B24BEA2A500F9563B /* UIView+ZKLayout.h */,
+				8145663C24BEA2A500F9563B /* UIView+ZKLayout.m */,
+				8145664124BEB03400F9563B /* UIImage+ZKMask.h */,
+				8145664224BEB03400F9563B /* UIImage+ZKMask.m */,
+				810718D724B70CD900C2709D /* ZKPopStyleView.h */,
+				810718D824B70CD900C2709D /* ZKPopStyleView.m */,
 				8107189524B5BCD500C2709D /* ZKView.h */,
 				8107189624B5BCD500C2709D /* ZKView.m */,
+				8118F10A24BC3B500025E234 /* UIControl+ZKControl.h */,
+				8118F10B24BC3B500025E234 /* UIControl+ZKControl.m */,
 				8190B55824B574B1005CC281 /* ZKGradientBorderView.h */,
 				8190B55924B574B1005CC281 /* ZKGradientBorderView.m */,
 				8190B55524B56434005CC281 /* SectionView.h */,
@@ -393,6 +419,7 @@
 				81B76719243FFC0F00D271F9 /* LaunchScreen.storyboard */,
 				81B7671C243FFC0F00D271F9 /* Info.plist */,
 				81B7671D243FFC0F00D271F9 /* main.m */,
+				810718D424B70A6600C2709D /* PrefixHeader.pch */,
 				81218A21245A6FE800FA46B6 /* TestStatusBar-Bridging-Header.h */,
 			);
 			path = TestStatusBar;
@@ -655,16 +682,19 @@
 				81403EE12451265400016826 /* SecondViewController.m in Sources */,
 				81403EEB2451909C00016826 /* RetweetedStatus.m in Sources */,
 				81B76713243FFC0800D271F9 /* ViewController.m in Sources */,
+				810718D924B70CD900C2709D /* ZKPopStyleView.m in Sources */,
 				81ED3E3B249356B50016D782 /* GetFirstLetters.m in Sources */,
 				8141F1D724ADCD4F00E9033C /* Players.m in Sources */,
 				8141F1D424ADC22800E9033C /* Persons.m in Sources */,
 				81C27C542491D09E0031146D /* AccountManager.m in Sources */,
+				8145663D24BEA2A500F9563B /* UIView+ZKLayout.m in Sources */,
 				811D5610245687C600D7E133 /* Manager.m in Sources */,
 				81B536D324AC74FB002F25CC /* NSString+Deal.m in Sources */,
 				8190B55A24B574B1005CC281 /* ZKGradientBorderView.m in Sources */,
 				818FCDA4249771E000788259 /* MyView.m in Sources */,
 				81ED3E4724936F2B0016D782 /* YFMetroListBox.m in Sources */,
 				8160A30D249860550031E0BE /* CustomTabBar.m in Sources */,
+				8145663A24BEA02900F9563B /* ZKGuideView.m in Sources */,
 				81403EE824518FEB00016826 /* User.m in Sources */,
 				81572C1C2466B74E0065D98E /* TestModel.m in Sources */,
 				81403EEE245191F200016826 /* AD.m in Sources */,
@@ -675,8 +705,10 @@
 				8160A31424986EBC0031E0BE /* TabbarController.m in Sources */,
 				8160A32024986F150031E0BE /* ThirdViewController.m in Sources */,
 				8107189724B5BCD500C2709D /* ZKView.m in Sources */,
+				8145664324BEB03400F9563B /* UIImage+ZKMask.m in Sources */,
 				811D561624568FC600D7E133 /* Tematemates.m in Sources */,
 				81ED3E38249353860016D782 /* NSString+FirstLetter.m in Sources */,
+				8118F10C24BC3B500025E234 /* UIControl+ZKControl.m in Sources */,
 				81ED3E3E24935F720016D782 /* BMChineseSort.m in Sources */,
 				81218A23245A6FE800FA46B6 /* MyPage.swift in Sources */,
 				811D561324568C4B00D7E133 /* Player.m in Sources */,
@@ -913,6 +945,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D68Z7HL3T6;
+				GCC_PREFIX_HEADER = ./TestStatusBar/PrefixHeader.pch;
 				INFOPLIST_FILE = TestStatusBar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -938,6 +971,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D68Z7HL3T6;
+				GCC_PREFIX_HEADER = ./TestStatusBar/PrefixHeader.pch;
 				INFOPLIST_FILE = TestStatusBar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

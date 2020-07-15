@@ -13,6 +13,7 @@
 #import "ZKUsers.h"
 #import "ZKCollectionViewCell.h"
 #import "ZKGradientBorderView.h"
+#import "ZKGuideView.h"
 
 #define kIndexKey @"title"
 #define kArrayKey @"array"
@@ -41,6 +42,9 @@ static NSString * const cellID = @"cellID";
 @property (nonatomic,strong)UITextField * textField;
 @property (nonatomic,strong)UIDatePicker * datePicker;
 @property (nonatomic,strong)UIToolbar * toolbar;
+@property (nonatomic,strong)CNPPopupController * popController;
+@property (nonatomic,strong)UITextView *textView;
+@property (nonatomic,strong)UIButton  *guideBtn;
 
 
 @end
@@ -138,14 +142,81 @@ static NSString * const cellID = @"cellID";
 -(void)sure{
     NSLog(@"makeSure");
 }
+-(void)btns:(UIButton *)btn{
+    [self.popController dismissPopupControllerAnimated:YES];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    
+//    [guide showInView:self.view maskBtn:self.guideBtn];
+}
+- (void)viewWillLayoutSubviews
+{
+  
+}
+-(void)testNumber{
+    NSLog(@"XXXXXXXXXXXXX");
+}
 - (void)viewDidLoad {
+    
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(testNumber)];
+    tap.numberOfTapsRequired = 5;
+    [self.view addGestureRecognizer:tap];
+    
+    
+    
+    
+    
     [super viewDidLoad];
-    [self.view addSubview:self.textField];
-    self.textField.inputView = self.datePicker;
-    self.textField.inputAccessoryView = self.toolbar;
+    
+    UIButton *guideBtn = [[UIButton alloc]init];
+    self.guideBtn = guideBtn;
+    [guideBtn setImage:[UIImage imageNamed:@""] forState:0];
+    guideBtn.backgroundColor = [UIColor redColor];
+    [self.view addSubview:guideBtn];
+    
+    self.textView = [[UITextView alloc]init];
+    self.textView.text = @"你收到了一个微信红包，请在手机上查看你收到了一个微信红包，请在手机上查看你收到了一个微信红包，请在手机上查看你收到了一个微信红包，请在手机上查看你收到了一个微信红包，请在手机上查看你收到了一个微信红包，请在手机上查看你收到了一个微信红包，请在手机上查看你收到了一个微信红包，请在手机上查看你收到了一个微信红包，请在手机上查看你收到了一个微信红包，请在手机上查看你收到了一个微信红包，请在手机上查看你收到了一个微信红包，请在手机上查看你收到了一个微信红包，请在手机上查看";
+    [self.view addSubview:self.textView];
+    
+    ZKGuideView *guide = [ZKGuideView new];
+    [guide showInView:self.view maskBtrn:self.guideBtn];
+    
+    _textView.top = 100;
+    _textView.width = self.view.width - 32;
+    _textView.height = self.view.height - 210;
+    _textView.left = 16;
+    
+    self.guideBtn.centerX = self.view.width/2;
+    self.guideBtn.top = _textView.bottom + 16;
+    self.guideBtn.bounds = CGRectMake(0, 0, 100, 40);
+    
+//    [self.view addSubview:self.textField];
+//    self.textField.inputView = self.datePicker;
+//    self.textField.inputAccessoryView = self.toolbar;
 //    [self.view addSubview:_toolbar];
 
-    
+//        MyView * myview = [[MyView alloc]initWithFrame:CGRectMake((ScreenWidth - 290)/2, 100, 290,400)];
+//        myview.backgroundColor = [UIColor clearColor];
+//        UIView *dottedLine = [[UIView alloc]initWithFrame:CGRectMake(8, 64, 290 - 16, 1)];
+//        //绘制虚线
+//        [self drawDashLine:dottedLine lineLength:8 lineSpacing:4 lineColor:[UIColor blackColor]];
+//        [myview addSubview:dottedLine];
+//
+//
+//    UIButton * button = [[UIButton alloc]initWithFrame:CGRectMake((ScreenWidth - 30)/2, 530, 30, 30)];
+//    [button setImage:[UIImage imageNamed:@"btn_ivoice"] forState:0];
+//    [button addTarget:self action:@selector(btns:) forControlEvents:UIControlEventTouchUpInside];
+//
+//    CNPPopupController * popVC = [[CNPPopupController alloc]initWithContents:@[myview,button]];
+//    self.popController = popVC;
+//    popVC.theme.backgroundColor = [UIColor clearColor];
+//    popVC.theme.popupContentInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+//    popVC.theme.popupStyle = CNPPopupStyleCentered;
+//    popVC.theme.contentVerticalPadding = 30.0f;
+//    popVC.theme.shouldDismissOnBackgroundTouch = YES;
+//    [popVC presentPopupControllerAnimated:YES];
     
 //    UIControl * control = [[UIControl alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
 //    [control addTarget:self action:@selector(clicks) forControlEvents:UIControlEventTouchUpInside];
